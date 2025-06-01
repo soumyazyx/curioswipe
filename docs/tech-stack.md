@@ -23,6 +23,7 @@ CurioSwipe is a mobile application that delivers swipeable, curiosity-driven top
   - Admin dashboard out of the box
   - Token-auth-enabled API endpoints
   - ORM for easy DB access
+  - Swagger endpoint exists at `/swagger/` but is currently not functional.
 
 ---
 

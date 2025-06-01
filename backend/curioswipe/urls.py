@@ -15,8 +15,31 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from topics.views import TopicViewSet, CategoryViewSet
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+from rest_framework.permissions import AllowAny
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="CurioSwipe API",
+        default_version="v1",
+        description="API documentation for CurioSwipe",
+        terms_of_service="https://www.google.com/policies/terms/",
+        contact=openapi.Contact(email="support@curioswipe.com"),
+        license=openapi.License(name="MIT License"),
+    ),
+    public=True,
+    permission_classes=(AllowAny,),
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/topics/', TopicViewSet.as_view({'get': 'list', 'post': 'create'}), name='topics-list-create'),
+    path('api/topics/<int:pk>/', TopicViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'}), name='topics-detail'),
+    path('api/categories/', CategoryViewSet.as_view({'get': 'list', 'post': 'create'}), name='categories-list-create'),
+    path('api/categories/<int:pk>/', CategoryViewSet.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'}), name='categories-detail'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

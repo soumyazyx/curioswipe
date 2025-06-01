@@ -1,23 +1,37 @@
 # CurioSwipe – Working Notes
 
-### **Current Status**
-1. **Backend:**
-   - Django project scaffolded under curioswipe.
-   - Development server is running on port `9003` and accessible via `http://129.154.40.152:9003/`.
-   - Oracle Autonomous Database schemas (`curioswipe_dev` and `curioswipe_prod`) are created and integrated.
-   - All migrations applied successfully; new tables verified using SQL Developer.
-   - `.env` file added for secure storage of database credentials.
-   - `settings.py` updated to dynamically load environment variables using `environ`.
-   - Dependencies installed from `requirements.txt` to ensure compatibility.
-   - No API endpoints or models have been implemented yet.
+## 🚦 Current Status
 
-2. **Mobile App:**
-   - Planned to use Kotlin with Jetpack Compose for UI and Retrofit/Ktor for networking.
-   - No code for the mobile app has been implemented yet.
+- Django backend project scaffolded under `backend/curioswipe/`.
+- Dev server accessible on port `9003` and confirmed accessible via `http://129.154.40.152:9003/`.
+- Oracle Autonomous Database schemas (`curioswipe_dev` and `curioswipe_prod`) are created and integrated.
+- All migrations applied successfully; new tables verified using SQL Developer.
+- `.env` file added for secure storage of database credentials.
+- `settings.py` updated to dynamically load environment variables using `environ`.
+- Dependencies installed from `requirements.txt` to ensure compatibility.
+- API endpoints implemented for `topics` and `categories` with full CRUD functionality.
+- Swagger endpoint exists at `/swagger/` but is currently not functional.
 
-3. **Documentation:**
-   - Tech stack and working notes are well-documented.
-   - Clear roadmap and project structure outlined.
+---
+
+## 🛠️ Next Steps
+
+1. **Mobile App Development**
+   - Scaffold the Android app using Kotlin and Jetpack Compose.
+   - Implement a basic swipeable UI for topics.
+   - Integrate Retrofit or Ktor for API communication.
+
+2. **Backend Enhancements**
+   - Add token-based authentication for API endpoints.
+   - Implement filtering and pagination for `/api/topics/` and `/api/categories/` endpoints.
+
+3. **Testing**
+   - Perform end-to-end testing between the backend and mobile app.
+   - Verify API responses and database interactions.
+
+4. **Documentation**
+   - Update README.md and tech-stack.md with recent changes.
+   - Document API usage and endpoints for developers.
 
 ---
 ---
@@ -102,41 +116,3 @@ GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDU
 
 ---
 
-## 🚦 Current Status
-
-- Django backend project scaffolded under `backend/curioswipe/`.
-- Dev server accessible on port `9003` and confirmed accessible via `http://129.154.40.152:9003/`.
-- Oracle Autonomous Database schemas (`curioswipe_dev` and `curioswipe_prod`) are created and integrated.
-- All migrations applied successfully; new tables verified using SQL Developer.
-- `.env` file added for secure storage of database credentials.
-- `settings.py` updated to dynamically load environment variables using `environ`.
-- Dependencies installed from `requirements.txt` to ensure compatibility.
-- No API endpoints or models have been implemented yet
-
----
-
-## 🛠️ Next Steps
-
-1. **Database Integration**
-   - Configure Django to use Oracle Autonomous Database (`curioswipe_dev` schema)
-   - Test DB connection with oracledb driver
-
-2. **API Scaffold**
-   - Add Django REST Framework to `INSTALLED_APPS`
-   - Create a `topics` app for topic models and endpoints
-   - Build a basic `/api/topic/` endpoint
-
-3. **Admin Setup**
-   - Register models for admin dashboard
-
-4. **Testing**
-   - Verify API and DB connectivity locally
-
----
-
-## 📝 Notes
-
-- Refer to [docs/tech-stack.md](./tech-stack.md) for overall architecture and stack choices.
-- Keep this file updated as you progress.
-
----
