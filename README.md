@@ -44,13 +44,15 @@ With optional text-to-speech and Android Auto support, CurioSwipe can become you
 
 ## 🛠️ Tech Stack
 
+Refer docs/tech-stack.md
+
 | Layer         | Tech (Planned / Preferred)                |
-|---------------|--------------------------------------------|
+|---------------|-------------------------------------------|
 | Frontend (App)| Android - Jetpack Compose or React Native |
-| Backend API   | FastAPI (Python)                           |
-| TTS Support   | Android Text-to-Speech                     |
-| Hosting       | TBD (Render / Railway / GCP / Firebase)    |
-| Storage       | JSON / SQLite / MongoDB / Any suitable DB  |
+| Backend API   | Django DRF (Python)                       |
+| TTS Support   | Android Text-to-Speech                    |
+| Hosting       | Oracle Cloud Infrastructure (OCI)         |
+| Storage       | Oracle Autonomous Database (ADB)          |
 
 ---
 
