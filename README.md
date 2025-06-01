@@ -84,3 +84,6 @@ This is a personal side project, but contributions, ideas, or forks are welcome.
 ## 📄 License
 
 MIT License — free to use, modify, or fork.
+
+
+![alt text](image.png)
