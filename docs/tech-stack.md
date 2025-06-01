@@ -30,8 +30,8 @@ CurioSwipe is a mobile application that delivers swipeable, curiosity-driven top
 
 - **Engine**: Oracle Autonomous Database (ADB)
 - **Schemas**:
-  - `curioswipe_dev` – development and testing
-  - `curioswipe_prod` – production usage
+  - `curioswipe_dev` – development and testing (created)
+  - `curioswipe_prod` – production usage (created)
 - **Driver**: [`oracledb`](https://pypi.org/project/oracledb/) (preferred) or `cx_Oracle`
 - **Why Oracle?**:
   - Already in use (e.g., trivia app)

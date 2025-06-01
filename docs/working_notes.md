@@ -1,12 +1,35 @@
-# CurioSwipe Backend – Working Notes
+# CurioSwipe – Working Notes
 
-This document tracks backend development progress, setup steps, and next actions.
+### **Current Status**
+1. **Backend:**
+   - Django project scaffolded under curioswipe.
+   - Development server is running on port `9003` and accessible via `http://129.154.40.152:9003/`.
+   - Oracle Autonomous Database schemas (`curioswipe_dev` and `curioswipe_prod`) are created and integrated.
+   - All migrations applied successfully; new tables verified using SQL Developer.
+   - `.env` file added for secure storage of database credentials.
+   - `settings.py` updated to dynamically load environment variables using `environ`.
+   - Dependencies installed from `requirements.txt` to ensure compatibility.
+   - No API endpoints or models have been implemented yet.
+
+2. **Mobile App:**
+   - Planned to use Kotlin with Jetpack Compose for UI and Retrofit/Ktor for networking.
+   - No code for the mobile app has been implemented yet.
+
+3. **Documentation:**
+   - Tech stack and working notes are well-documented.
+   - Clear roadmap and project structure outlined.
+
+---
+---
+---
+
+
 
 ---
 
 ## ✅ Initial Setup
 
-- **Ingress Rule:**  
+**Ingress Rule:**  
 *For development servers, we are using 9000 series ports - like 9001, 9002.  
 So, selected 9003 port for curioswipe development server*  
 **Steps to Add Ingress Rule for Port 9003 in OCI**  
@@ -49,14 +72,46 @@ So, selected 9003 port for curioswipe development server*
     ```
     Access the page via: http://129.154.40.152:9003/
 
+## 🔹 Oracle ADB Schemas
+
+- `curioswipe_dev` and `curioswipe_prod` schemas have been created in Oracle Autonomous Database (ADB) with password `Offline@1235`.
+- Both have been granted CONNECT, RESOURCE, and object creation privileges.
+
+### 🗒️ Executed Oracle SQL Commands
+
+The following SQL commands were executed to set up the schemas and privileges:
+
+```sql
+-- Create development user/schema
+CREATE USER curioswipe_dev IDENTIFIED BY "Offline@1235"
+DEFAULT TABLESPACE data
+QUOTA UNLIMITED ON data;
+
+GRANT CONNECT, RESOURCE TO curioswipe_dev;
+GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE TO curioswipe_dev;
+
+-- Create production user/schema
+CREATE USER curioswipe_prod IDENTIFIED BY "Offline@1235";
+
+ALTER USER curioswipe_prod DEFAULT TABLESPACE data;
+ALTER USER curioswipe_prod QUOTA UNLIMITED ON data;
+
+GRANT CONNECT, RESOURCE TO curioswipe_prod;
+GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE TO curioswipe_prod;
+```
+
 ---
 
 ## 🚦 Current Status
 
-- Django backend project scaffolded under `backend/curioswipe/`
-- Dev server accessible on port `9003`
-- Ready for database integration (Oracle ADB)
-- No API endpoints or models yet
+- Django backend project scaffolded under `backend/curioswipe/`.
+- Dev server accessible on port `9003` and confirmed accessible via `http://129.154.40.152:9003/`.
+- Oracle Autonomous Database schemas (`curioswipe_dev` and `curioswipe_prod`) are created and integrated.
+- All migrations applied successfully; new tables verified using SQL Developer.
+- `.env` file added for secure storage of database credentials.
+- `settings.py` updated to dynamically load environment variables using `environ`.
+- Dependencies installed from `requirements.txt` to ensure compatibility.
+- No API endpoints or models have been implemented yet
 
 ---
 
