@@ -13,6 +13,7 @@
 include 'shared'
 include 'api'
 include 'services:webservice'
+include ':app'
 */
 
 rootProject.name = 'mobile'

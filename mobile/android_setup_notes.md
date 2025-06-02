@@ -159,9 +159,93 @@ After running the `gradle init --type kotlin-application` command, the following
 
 ---
 
-## **Next Steps**
-1. Start implementing the Android app structure using Kotlin and Jetpack Compose.
-2. Create a basic UI for swipeable topics using Jetpack Compose.
-3. Test the app to ensure the configurations and dependencies are working correctly.
+### **6. Install SDKMAN and Kotlin**
+```bash
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install kotlin
+```
+- **Purpose**: Install SDKMAN, a tool for managing development kits, and use it to install Kotlin.
+- **Explanation**:
+  - SDKMAN simplifies the installation and management of software development kits.
+  - Kotlin was installed using SDKMAN, ensuring the latest version is set up.
 
-Let me know when you're ready to proceed!
+**Steps Taken**:
+1. Installed SDKMAN by running the `curl` command.
+2. Initialized SDKMAN using the `source` command.
+3. Installed Kotlin using the `sdk install kotlin` command.
+
+**Verification**:
+- After installation, Kotlin version 2.1.21 was set as the default.
+- Verified the installation by running:
+  ```bash
+  kotlin -version
+  ```
+
+---
+
+### **7. Run Main.kt File**
+```bash
+cd /home/ubuntu/projects/curioswipe/mobile/src/main/kotlin
+kotlinc Main.kt -include-runtime -d Main.jar
+java -jar Main.jar
+```
+- **Purpose**: Compile and execute the `Main.kt` file to verify the Kotlin setup.
+- **Explanation**:
+  - The `kotlinc` command compiles the Kotlin file into a JAR.
+  - The `java -jar` command runs the compiled JAR file.
+
+**Output**:
+```
+Hello, Kotlin Android App!
+```
+- **Why**: This confirms that the Kotlin setup is working correctly and the project is configured properly.
+
+---
+
+### **8. Current Status and Issue with Gradle**
+
+- **Kotlin is successfully installed and verified** by compiling and running a simple `Main.kt` file.
+- **Android app structure has been started** with a `MainActivity.kt` using Jetpack Compose for a basic UI.
+- **OpenJDK 11 is installed and JAVA_HOME is set** to `/usr/lib/jvm/java-11-openjdk-arm64`.
+- **Gradle build fails** with the error:
+  > Could not determine java version from '11.0.27'.
+- This error suggests a compatibility issue between the installed Gradle version and Java 11.
+
+
+
+---
+
+## Gradle/Java Compatibility Issue Resolved (June 2025)
+
+### Problem
+- Gradle build failed with:
+  > Could not determine java version from '11.0.27'.
+- Cause: The system Gradle version (4.4.1) was too old for Java 11.
+
+### Solution Steps
+1. Verified Gradle version (`gradle --version`): 4.4.1 (too old for Java 11).
+2. Upgraded Gradle Wrapper to 7.6.4 by editing `gradle-wrapper.properties`:
+   - `distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.4-bin.zip`
+3. Ran `./gradlew --version` to confirm upgrade.
+4. Fixed build script errors:
+   - Created a top-level `build.gradle` with `buildscript` and `allprojects` blocks for plugin classpaths and repositories.
+   - Moved the app configuration to `app/build.gradle` with only the `plugins`, `android`, `dependencies`, and `repositories` blocks.
+   - Updated `settings.gradle` to include `:app` module.
+5. Ran `./gradlew build` successfully (no plugin errors).
+
+### Current Structure
+- `mobile/build.gradle` (top-level, configures plugins and repositories)
+- `mobile/app/build.gradle` (app module, contains Android app config)
+- `mobile/settings.gradle` (includes `:app`)
+
+---
+
+## **Next Steps**
+1. Implement the Android app features using Kotlin and Jetpack Compose.
+2. Start with a basic UI for swipeable topics in `MainActivity.kt`.
+3. Test the app to ensure all dependencies and configurations work.
+
+---
+
+**All Gradle/Java compatibility issues are now resolved. You can proceed with Android app development.**
