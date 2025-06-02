@@ -91,6 +91,10 @@ CurioSwipe is a mobile application that delivers swipeable, curiosity-driven top
 - Dependencies installed from `requirements.txt` to ensure compatibility.
 - API endpoints implemented for `topics` and `categories` with full CRUD functionality.
 - Swagger endpoint exists at `/swagger/` but is currently not functional.
+- **Android App Development Progress**:
+  - Gradle installed and initialized for the Android project.
+  - Basic project structure created (`build.gradle`, `settings.gradle`, etc.).
+  - Next steps involve setting up the Android app structure using Kotlin and Jetpack Compose.
 
 ---
 
