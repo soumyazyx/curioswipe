@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2873967a-36cc-462b-b855-fbd82f70a2dc" name="Changes" comment="Initialize PyCharm project files and remove obsolete documentation&#10;&#10;- Add PyCharm project configuration files (`.idea/`) including module settings, VCS mappings, and a `.gitignore` file.&#10;- Delete `docs/tech-stack.md` and `docs/working_notes.md`." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "soumyazyx"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/soumyazyx/curioswipe.git",
+    "accountId": "291789c7-c0eb-4ed6-b94d-25ea94861ade"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2xyrShYHGUYlSHsi0mwT196NHT7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "android-app-development",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2873967a-36cc-462b-b855-fbd82f70a2dc" name="Changes" comment="" />
+      <created>1748921156347</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748921156347</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initialize PyCharm project files and remove obsolete documentation&#10;&#10;- Add PyCharm project configuration files (`.idea/`) including module settings, VCS mappings, and a `.gitignore` file.&#10;- Delete `docs/tech-stack.md` and `docs/working_notes.md`.">
+      <option name="closed" value="true" />
+      <created>1748921330386</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748921330386</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialize PyCharm project files and remove obsolete documentation&#10;&#10;- Add PyCharm project configuration files (`.idea/`) including module settings, VCS mappings, and a `.gitignore` file.&#10;- Delete `docs/tech-stack.md` and `docs/working_notes.md`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialize PyCharm project files and remove obsolete documentation&#10;&#10;- Add PyCharm project configuration files (`.idea/`) including module settings, VCS mappings, and a `.gitignore` file.&#10;- Delete `docs/tech-stack.md` and `docs/working_notes.md`." />
+  </component>
+</project>

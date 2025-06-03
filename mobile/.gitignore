@@ -1,0 +1,39 @@
+# Android/IntelliJ
+.idea/
+*.iml
+
+# Build
+/build/
+/app/build/
+
+# Local config
+local.properties
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kotlin/Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Log
+*.log
+
+# Generated
+captures/
+output.json
+
+# Misc
+*.keystore
+*.jks
+
+# VS Code
+.vscode/
+

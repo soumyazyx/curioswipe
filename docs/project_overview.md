@@ -74,6 +74,21 @@ CurioSwipe is a mobile application that delivers swipeable, curiosity-driven top
 
 ---
 
+## 🔹 Android Mobile App (NEW)
+
+- **Project created in Android Studio (June 2025)**
+- **Location**: `mobile/` folder in the repo
+- **Language**: Kotlin
+- **UI Framework**: Jetpack Compose (selected during project setup)
+- **Build**: Initial build successful in Android Studio
+- **Setup**: Project opened in a dedicated Android Studio window for focused development
+- **Next Steps**:
+  - Explore project structure and understand key files
+  - Run the default app on an emulator or device
+  - Plan integration with backend API
+
+---
+
 ## 🔸 Optional Future Enhancements
 
 - **Personalization**:
@@ -98,11 +113,7 @@ CurioSwipe is a mobile application that delivers swipeable, curiosity-driven top
 - `settings.py` updated to dynamically load environment variables using `environ`.
 - Dependencies installed from `requirements.txt` to ensure compatibility.
 - API endpoints implemented for `topics` and `categories` with full CRUD functionality.
-- Swagger endpoint exists at `/swagger/` but is currently not functional.
-- **Android App Development Progress**:
-  - Gradle installed and initialized for the Android project.
-  - Basic project structure created (`build.gradle`, `settings.gradle`, etc.).
-  - Next steps involve setting up the Android app structure using Kotlin and Jetpack Compose.
+- **Android app project initialized in `mobile/` and ready for development.**
 
 ---
 
@@ -200,3 +211,6 @@ ALTER USER curioswipe_prod QUOTA UNLIMITED ON data;
 GRANT CONNECT, RESOURCE TO curioswipe_prod;
 GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE TO curioswipe_prod;
 ```
+````
+
+
