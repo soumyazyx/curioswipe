@@ -1,5 +1,13 @@
 # 🧱 CurioSwipe – Project Overview
 
+> **Note:** This project is being used as a learning pad by a beginner (absolute zero experience) in Android app development. All steps, explanations, and troubleshooting are written with that context in mind. 
+>
+> **Development Context:**
+> - Code is developed and executed on a remote Linux (Oracle OCI) VM, accessed via SSH from a Windows laptop running VS Code.
+> - The user may want to run the app on a local Android device or emulator on their Windows machine, not on the remote Linux box.
+>
+> Please provide detailed, step-by-step guidance for every next action, considering this setup.
+
 CurioSwipe is a mobile application that delivers swipeable, curiosity-driven topics (randomized or interest-based), optionally with text-to-speech audio playback. Designed to be used while commuting — even with Android Auto — it's a "snackable curiosity companion" built for modern users.
 
 ---
@@ -191,12 +199,4 @@ ALTER USER curioswipe_prod QUOTA UNLIMITED ON data;
 
 GRANT CONNECT, RESOURCE TO curioswipe_prod;
 GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE TO curioswipe_prod;
-```
----
-```
-ubuntu@whatever:~/projects/curioswipe$ source backend/venv/bin/activate
-
-(venv) ubuntu@whatever:~/projects/curioswipe$ cd backend/
-
-(venv) ubuntu@whatever:~/projects/curioswipe/backend$ python manage.py runserver 0.0.0.0:9003
 ```

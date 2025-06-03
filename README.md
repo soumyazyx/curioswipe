@@ -85,5 +85,17 @@ This is a personal side project, but contributions, ideas, or forks are welcome.
 
 MIT License — free to use, modify, or fork.
 
+---
+
+# README
+
+> **Note:** This project is being used as a learning pad by a beginner (absolute zero experience) in Android app development. All steps, explanations, and troubleshooting are written with that context in mind. 
+>
+> **Development Context:**
+> - Code is developed and executed on a remote Linux (Oracle OCI) VM, accessed via SSH from a Windows laptop running VS Code.
+> - The user may want to run the app on a local Android device or emulator on their Windows machine, not on the remote Linux box.
+>
+> Please provide detailed, step-by-step guidance for every next action, considering this setup.
+
 
 ![alt text](image.png)
